@@ -1,0 +1,168 @@
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            color: #fff;
+            background: #000;
+        }
+
+        /* Background Video */
+        .background-video {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+            filter: blur(8px) brightness(0.5);
+        }
+
+        /* Form Container */
+        .form-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        .form-wrapper {
+            background: rgba(0, 0, 0, 0.5);
+            border-radius: 10px;
+            padding: 30px;
+            width: 90%;
+            max-width: 500px;
+            text-align: center;
+        }
+
+        .form-wrapper h1 {
+            margin-bottom: 20px;
+            font-size: 2em;
+            color: #ffca39;
+        }
+
+        .form-wrapper input, .form-wrapper select, .form-wrapper button {
+            width: 100%;
+            margin-bottom: 15px;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1em;
+        }
+
+        .form-wrapper input, .form-wrapper select {
+            background: #333;
+            color: #fff;
+        }
+
+        .form-wrapper button {
+            background: #ffca39;
+            color: #000;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background 0.3s, transform 0.2s;
+        }
+
+        .form-wrapper button:hover {
+            background: #ffca39;
+            transform: scale(1.05);
+        }
+
+        .banner {
+            background-color: #ffca39;
+            color: #000;
+            font-weight: bold;
+            padding: 10px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+        .organizer-image {
+            position: relative;
+            top: 0px;
+            right: 0px;
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            border: 3px solid #ffca39;
+            object-fit: cover;
+        }
+                /* Modal Styles */
+                .modal {
+            display: none;
+            position: fixed;
+            z-index: 10;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        .modal-content {
+            background-color: #333;
+            margin: 10% auto;
+            padding: 20px;
+            border-radius: 10px;
+            width: 80%;
+            max-width: 500px;
+            color: #fff;
+        }
+
+        .modal-content h2 {
+            color: #ffca39;
+            margin-bottom: 10px;
+        }
+
+        .modal-content p {
+            font-size: 0.9em;
+            line-height: 1.5;
+        }
+
+        .close-modal {
+            color: #ffca39;
+            float: right;
+            font-size: 1.2em;
+            cursor: pointer;
+        }
+
+        .close-modal:hover {
+            color: #ffca39;
+        }
+
+        .terms-link {
+            color: #ffca39;
+            text-decoration: underline;
+            cursor: pointer;
+            font-size: 0.9em;
+        }
+               /* Footer */
+               footer {
+                background: #111;
+                color: #fff;
+                text-align: center;
+                padding: 10px;
+                bottom: 0;
+                width: 100%;
+            }
+    
+            footer a {
+                color: #ffcc00;
+                text-decoration: none;
+                margin: 0 10px;
+                font-size: 1.2em;
+            }
+    
+            footer a:hover {
+                color: #ffca39;
+            }
+            footer i {
+                margin: 0 10px;
+            }
+            footer p {
+                margin: 10px 0 0;
+                font-size: 0.9em;
+            }

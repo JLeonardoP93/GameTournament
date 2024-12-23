@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> 
+    <link rel="stylesheet" href="style.css">
+    <title>Video Game Tournament Form</title>    
+</head>
+<body>
+    <!-- Background Video -->
+    <video class="background-video" autoplay muted loop>
+        <source src="Honor of Kings - Cinematic Trailer 3 (Blur Studio).mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <!-- Background Audio -->
+    <audio autoplay loop>
+        <source src="HonorofKingsSoundtrack.mp3" type="audio/mpeg">
+        Your browser does not support the audio tag.
+    </audio>
+
+    <div class="form-container">
+        <div class="form-wrapper">
+            <img src="/Captura.PNG" alt="Organizer" class="organizer-image">
+            <div class="banner">Join the Ultimate 5v5 Tournament!</div>
+            <h1>Registra tu equipo</h1>
+            <form action="GameConection.php" method="POST">
+                <input type="text" name="team_name" placeholder="Team Name" required>
+                <input type="text" name="player_id" placeholder="Player ID / In-Game Name" required>
+                <input type="text" name="discord_id" placeholder="Discord ID" required>
+                <select name="region" required>
+                    <option value="" disabled selected>Selecciona Region</option>
+                    <option value="NA">North America</option>
+                    <option value="EU">Europe</option>
+                    <option value="ASIA">Asia</option>
+                    <option value="SA">South America</option>
+                </select>
+                <select name="game_role" required>
+                    <option value="" disabled selected>Choose your role</option>
+                    <option value="Top">Top Lane</option>
+                    <option value="Jungle">Jungle</option>
+                    <option value="Mid">Mid Lane</option>
+                    <option value="ADC">ADC</option>
+                    <option value="Support">Support</option>
+                </select>
+                <p><span class="terms-link" onclick="openModal()">Terminos y Condiciones</span></p>
+                <button type="submit">Registrar</button>
+            </form>
+        </div>
+    </div>
+    <!-- Modal Section -->
+    <div id="termsModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeModal()">&times;</span>
+            <h2>Terminos y Condiciones</h2>
+            <p>Al registrarse para el torneo Honor of Kings 5v5, usted reconoce y acepta los siguientes términos:</p>
+            <ul>
+                <li>Usted es responsable de garantizar una conexión a Internet estable. Los partidos no se reiniciarán debido a problemas de conexión o retrasos.</li>
+                <li>Se espera que todos los participantes mantengan el espíritu deportivo y el respeto hacia los demás jugadores, organizadores y espectadores.</li>
+                <li>Cada equipo debe estar formado por 5 jugadores registrados. No se permiten sustituciones a menos que lo aprueben los organizadores.</li>
+                <li>No presentarse a la hora programada del partido resultará en una pérdida por incomparecencia.</li>
+                <li>Los organizadores se reservan el derecho de descalificar a cualquier participante o equipo por infracciones de las reglas, trampas o comportamiento antideportivo.</li>
+                <li>Las decisiones de los organizadores son definitivas y vinculantes en todos los asuntos relacionados con el torneo.</li>
+            </ul>
+        </div>
+    </div>
+    <footer>
+        <p>Siguenos</p>
+        <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
+        <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.tiktok.com" target="_blank"><i class="fab fa-tiktok"></i></a>
+    </footer>
+
+    <script>
+        function openModal() {
+            document.getElementById('termsModal').style.display = 'block';
+        }
+
+        function closeModal() {
+            document.getElementById('termsModal').style.display = 'none';
+        }
+
+        window.onclick = function(event) {
+            const modal = document.getElementById('termsModal');
+            if (event.target === modal) {
+                modal.style.display = 'none';
+            }
+        }
+    </script>
+</body>
+</html>
